@@ -34,7 +34,7 @@ let emptyArray = ['_','_','_'];
 
 function guessLetter(guess){
     for (i = 0; i < foxArray.length; i++){
-        if (guess == foxArray[i] || guess == foxArray[i++] || guess == foxArray[i++]){
+        if (guess == foxArray[i]){
             emptyArray[i] = guess;
             for (let j = 0; j < foxArray.length; j++){
                 console.log(emptyArray[j]);
@@ -44,13 +44,12 @@ function guessLetter(guess){
                 console.log('Congrats you have guessed the word FOX')
             }
         }
-        else{
-            console.log('Sorry, the letter '+ guess +' is not in the word');
-        }
     }
+    console.log('Sorry, the letter '+ guess +' is not in the word');
 }
 
-//calcs(3);
+calcs(3);
+console.log('\n');
 guessLetter('G');
 guessLetter('Y');
 guessLetter('D');
@@ -63,7 +62,3 @@ guessLetter('O');
 guessLetter('E');
 guessLetter('Z');
 guessLetter('X');
-guessLetter('X');
-guessLetter('X');
-guessLetter('X');
-
