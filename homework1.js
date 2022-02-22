@@ -29,4 +29,41 @@ function calcs(num){
     percent = percentOf(area, squaredNum);
 }
 
-calcs(3);
+const foxArray = ['F', 'O', 'X'];
+let emptyArray = ['_','_','_'];
+
+function guessLetter(guess){
+    for (i = 0; i < foxArray.length; i++){
+        if (guess == foxArray[i] || guess == foxArray[i++] || guess == foxArray[i++]){
+            emptyArray[i] = guess;
+            for (let j = 0; j < foxArray.length; j++){
+                console.log(emptyArray[j]);
+            }
+            console.log('Congrats you\'ve guessed the letter '+ guess +' which is in the word');
+            if (emptyArray[0] == 'F' && emptyArray[1] == 'O' && emptyArray[2] == 'X'){
+                console.log('Congrats you have guessed the word FOX')
+            }
+        }
+        else{
+            console.log('Sorry, the letter '+ guess +' is not in the word');
+        }
+    }
+}
+
+//calcs(3);
+guessLetter('G');
+guessLetter('Y');
+guessLetter('D');
+guessLetter('F');
+guessLetter('B');
+guessLetter('N');
+guessLetter('C');
+guessLetter('M');
+guessLetter('O');
+guessLetter('E');
+guessLetter('Z');
+guessLetter('X');
+guessLetter('X');
+guessLetter('X');
+guessLetter('X');
+
